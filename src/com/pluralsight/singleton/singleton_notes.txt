@@ -1,0 +1,32 @@
+Singleton Design Pattern
+
+Overview
+* Guarantees only one instance is created 
+* Guarantees control of resource
+* Lazily loaded
+* Examples are: Runtime, Logger, Spring Beans, Graphics Managers
+
+
+Design
+* Class is responsible for lifecycle (for creating itself)
+* Static in nature (although not actually a static class, because needs to be thread safe)
+* Private instance 
+* Private constructor (singleton itself calls constructor, and nobody else)
+* No parameters required (violates singleton pattern if parameters passed)
+
+
+Singleton            					vs              Factory
+* Returns same instance								* Returns various instances
+* One constructor method - no args					* Multiple constructors
+(i.e use getInstance())								* Interface Driven
+* No interface										* Adaptable to environment more easily
+
+
+Pitfalls of Singleton
+* Often overused
+* Difficult to unit test
+* If not careful, not thread-safe
+* Sometimes confused for Factory
+* java.util.Calendar is NOT a Singleton (its a Prototype)
+
+

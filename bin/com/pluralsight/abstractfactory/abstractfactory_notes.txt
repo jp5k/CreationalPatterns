@@ -1,0 +1,37 @@
+Abstract Factory Design Pattern - examples are DocumentBuilder 
+(and also used as many frameworks, not just in the Java API)
+
+Overview
+* Factory of Factories
+* Factory of Related Objects
+* Common Interface
+* Defer To Subclasses
+
+Design
+* Groups Factories Together
+* Factory is responsible for lifecycle
+* Common Interface
+* Concrete classes
+* Parameterized create method
+* Composition typically  
+
+Pitfalls
+* Complexity
+* Runtime switch - client knows too much about what is going on?
+* Pattern within a pattern
+* Problem specific
+* Starts as a Factory (most people don't think about using abstract factory to 
+begin with, usually just start with a factory).
+
+
+Factory										AbstractFactory (EVERYTHING ON THE FACTORY LIST, PLUS THESE!!!)
+* Returns various instances					*Implemented with a factory
+-Multiple constructors						*Hides the underlying concrete factory
+*Interface driven							*Another layer of abstraction to our environment
+*Adaptable to environment more easily  		*Typically built through composition									
+
+Summary
+* GROUP OF SIMILAR FACTORIES
+* COMPLEX
+* HEAVILY ABSTRACTED (software contracts, i.e Interfaces, subclasses, composition, general software contracts)
+* Typcially written as framework pattern (rather than solving a particular problem as with other patterns).

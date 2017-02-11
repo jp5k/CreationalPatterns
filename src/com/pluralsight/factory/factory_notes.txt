@@ -1,0 +1,36 @@
+Factory Design Pattern - examples are Calendar, ResourceBundle, NumberFormat
+
+Overview
+* Almost the opposite of the singleton
+* Doesn't expose instantiation logic
+* Defers instantiation (creation) logic to the subclass
+* Common interface, which the client knows about
+* Specified by architecture, implemented by user
+* 
+
+Design
+* Factory is responsible for lifecycle
+* Objects referenced through a common interface.
+* Factories will reference several concrete classes
+* Typcially a parameterized method for create method
+*
+
+Pitfalls
+* Complexity
+* REMEMBER - CREATION DOESN'T TAKE PLACE IN THE FACTORY, but in 
+the SUBCLASSES of the factory type that we are creating
+* Need to plan from the beginning, and plan accordingly
+
+Singleton								Factory
+*Returns same instance					*Returns various instances
+-One constructor method - no args		*Multiple constructors
+* No interface							*Interface driven (i.e a contract)
+* No Subclasses							*Subclasses
+  										*Adaptable to environments more easily.
+  										
+Factory pattern is Parameter Driven
+It solves complex creation problem
+A little complex
+Opposite of Singleton
+  										
+

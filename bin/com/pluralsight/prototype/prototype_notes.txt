@@ -1,0 +1,39 @@
+Prototype Design Pattern java.lang.Object#clone() is an example
+
+Overview
+* Avoid costly creation
+* Normally a refactoring pattern (once you've got code which is expensive in terms of code creation)
+* Avoids subclassing
+* Typically doesn't use 'new' (i.e cloning)
+* Often utilizes an Interface
+* Usually implemented with a Registry (using a clone from the Registry) 
+* Often refactored later on!!! When object creation is a problem with keyword NEW
+* Don't always jump to Factory - can lead to other problems.
+
+
+Design
+* Typically implements the Clone method and Cloneable Interface
+* Avoids keyword 'new' 
+* Although a copy, each instance is unique
+* Costly construction not handled by client
+* Can still utilize parameters for construction, but typically you don't 
+* Shallow vs Deep Copy (i.e copy opject references as well)
+
+
+Think of Amazon needing to have millions of items.  Could be very costly in creation for New class 
+construction, but prototype pattern will help in situations like the demo - because it uses the clone 
+method to create objects with unique object reference, without using the keyword NEW, therefore
+much lighter weight.
+
+
+Pitfalls
+* Sometimes not clear when to use
+* Typically used with another patterns (e.g a registry).  A pattern within a pattern is a framework.
+* Shallow vs Deep copy (clone() method only returns a SHALLOW COPY!!!  Need to implement your 
+own for a Deep copy.	
+
+Prototype      vs  										Factory                       
+* Lighter weight construction							* Flexible objects (multiple constructors)
+  (using copy constructor or clone)						* Concrete instance 
+* Shallow or Deep copy									* Fresh instance (no programmatic defaults)
+* Copy of itself 							
